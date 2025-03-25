@@ -3,7 +3,7 @@
 #include <iostream>
 #include <cmath>
 
-// Define M_PI if not available
+
 #ifndef M_PI
 #define M_PI asin(1.0) * 2.0
 #endif
@@ -13,7 +13,7 @@ const float CIRCLE_RADIUS = 25.0f;
 const float SEGMENT_LENGTH = WINDOW_SIZE / 3.0f;
 const float SEGMENT_THICKNESS = 3.0f;
 const float VECTOR_LENGTH = 10.0f; // slower movement
-const float ANGLE = 25.0f * M_PI / 180.0f; // 25° in radians
+const float ANGLE = 25.0f * M_PI / 180.0f; 
 
 // Vertex shader for both circle and segment
 const char* vertexShaderSource = R"(
@@ -70,11 +70,11 @@ void checkProgramLink(GLuint program) {
     }
 }
 
-// Global variables
+
 float segmentY = WINDOW_SIZE / 2.0f;
 float circleX = WINDOW_SIZE / 2.0f;
 float circleY = WINDOW_SIZE / 2.0f;
-float velocityX = 5.0f; // Reduced from 5.0f for slower movement
+float velocityX = 5.0f; 
 float velocityY = 0.0f;
 bool vectorMode = false;
 void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods) {
@@ -110,7 +110,7 @@ int main() {
     glfwMakeContextCurrent(window);
     glfwSetKeyCallback(window, keyCallback);
 
-    // Enable VSync to cap at 60 FPS (optional for smoother motion)
+   
     glfwSwapInterval(1);
 
     // Initialize GLEW
